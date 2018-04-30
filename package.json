@@ -1,0 +1,26 @@
+{
+  "name": "dashboard_vue",
+  "version": "1.0.0",
+  "description": "A simple dashboard for data visualization developed by Vue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvyufeng/dashboard_vue.git"
+  },
+  "author": "lvyufeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lvyufeng/dashboard_vue/issues"
+  },
+  "homepage": "https://github.com/lvyufeng/dashboard_vue#readme",
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.0.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.6.0"
+  }
+}
