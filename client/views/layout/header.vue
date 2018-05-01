@@ -5,21 +5,23 @@
 </template>
 
 <script>
-
     export default {
-        name: "header",
+      name: 'header'
 
     }
 </script>
 
 <style lang="stylus" scoped>
-.main-header
+.main-header{
     text-align center
+    h1{
+        font-size 80px
+        color rgba(175,47,47,0.5)
+        font-weight 500
+        margin 20px
+    }
 
-h1
-    font-size 80px
-    color rgba(175,47,47,0.5)
-    font-weight 500;
-    margin 20px
+}
+
 
 </style>

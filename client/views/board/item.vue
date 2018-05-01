@@ -8,16 +8,16 @@
 
 <script>
     export default {
-        name: "item",
-        props:{
-            todo:{
-                type:Object,
-                required:true,
-            }
-        },
-        methods:{
-            deleteTodo(){},
+      name: 'item',
+      props: {
+        todo: {
+          type: Object,
+          required: true
         }
+      },
+      methods: {
+        deleteTodo () {}
+      }
     }
 </script>
 

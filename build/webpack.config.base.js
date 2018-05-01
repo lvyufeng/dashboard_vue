@@ -1,6 +1,71 @@
 /*
 * @Author: lvyufeng
-* @Date:   2018/5/1
-* 
+* @Date:   2018/4/30
+*
 */
-'use strict';
+const isPro = process.env.NODE_ENV !== 'development'
+
+
+const path = require('path')
+
+const vueLoaderOptions = require('./vue-loader.config.js')
+
+const config = {
+    target: "web",
+    entry: path.join(__dirname,'../client/index.js'),
+    output: {
+        filename: "bundle.[hash:8].js",
+        path: path.join(__dirname,'../dist')
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(vue|js|jsx)$/,
+                loader: "eslint-loader",
+                exclude:/node_modules/,
+                enforce: "pre"
+            },
+            {
+                test: /\.vue$/,
+                loader: "vue-loader",
+                options: vueLoaderOptions(isPro)
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude:/node_modules/
+            },
+            {
+                test: /\.jsx$/,
+                loader: "babel-loader",
+            },
+
+
+            {
+                test: /\.(gif|jpg|jpeg|png|svg)$/,
+                use: [
+                    {
+                        loader: "url-loader",
+                        options: {
+                            limit:1024,
+                            name:'resources/[path][name].[hash:8].[ext]'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        },
+        runtimeChunk: true,
+    }
+}
+
+
+
+module.exports = config
+
+

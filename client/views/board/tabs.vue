@@ -14,24 +14,24 @@
 
 <script>
     export default {
-        props:{
-            filter:{
-                type:String,
-                required:true,
-            }
-        },
-        data(){
-            return {
-                states:[
-                    'all','active','completed'
-                ]
-            }
-        },
-        methods:{
-            toggleFilter(){},
-            clearAllCompleted(){},
-        },
-        name: "tabs"
+      props: {
+        filter: {
+          type: String,
+          required: true
+        }
+      },
+      data () {
+        return {
+          states: [
+            'all', 'active', 'completed'
+          ]
+        }
+      },
+      methods: {
+        toggleFilter () {},
+        clearAllCompleted () {}
+      },
+      name: 'tabs'
     }
 </script>
 

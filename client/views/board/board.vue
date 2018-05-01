@@ -9,28 +9,27 @@
 </template>
 
 <script>
-
     import Tabs from './tabs.vue'
     import Item from './item.vue'
     export default {
-        data(){
-            return {
-                todo:{
-                    id:0,
-                    content:'this is todo',
-                    completed:false,
-                },
-                filter:'all',
-            }
-        },
-        name: "board",
-        methods:{
-            doQuery(){}
-        },
-        components:{
-            Item,
-            Tabs
+      data () {
+        return {
+          todo: {
+            id: 0,
+            content: 'this is todo',
+            completed: false
+          },
+          filter: 'all'
         }
+      },
+      name: 'board',
+      methods: {
+        doQuery () {}
+      },
+      components: {
+        Item,
+        Tabs
+      }
     }
 </script>
 

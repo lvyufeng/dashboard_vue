@@ -13,11 +13,11 @@
     import Footer from './views/layout/footer.jsx'
     import Board from './views/board/board.vue'
     export default {
-        components:{
-            Header,
-            Board,
-            Footer,
-        }
+      components: {
+        Header,
+        Board,
+        Footer
+      }
     }
 </script>
 
