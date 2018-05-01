@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    import Header from './dashboard/header.vue'
-    import Footer from './dashboard/footer.jsx'
-    import Board from './dashboard/board.vue'
+    import Header from './views/layout/header.vue'
+    import Footer from './views/layout/footer.jsx'
+    import Board from './views/board/board.vue'
     export default {
         components:{
             Header,
