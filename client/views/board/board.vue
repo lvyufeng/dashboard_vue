@@ -5,6 +5,7 @@
         @keyup = "doQuery">
         <item :todo="todo"></item>
         <tabs :filter="filter"></tabs>
+      <router-view/>
     </section>
 </template>
 
@@ -34,12 +35,12 @@
 </script>
 
 <style lang="stylus" scoped>
-    .real-app{
+  .real-app{
         width 600px
         margin  0 auto
         box-shadow 0 0 5px #666
     }
-    .add-input{
+  .add-input{
         position relative
         width 100%
         font-size 24px
@@ -50,7 +51,7 @@
         outline none
         color inherit
         /*padding  6px*/
-        border  1px soild #999
+        border 1px solid #999
         box-shadow inset 0 -1px 5px 0 rgba(0,0,0,0.9)
         box-sizing border-box
         font-smoothing antialiased

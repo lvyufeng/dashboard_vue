@@ -3,7 +3,7 @@
 * @Date:   2018/4/30
 *
 */
-const isPro = process.env.NODE_ENV !== 'development'
+const isDev = process.env.NODE_ENV === 'development'
 
 
 const path = require('path')
@@ -11,6 +11,7 @@ const path = require('path')
 const vueLoaderOptions = require('./vue-loader.config.js')
 
 const config = {
+    mode:process.env.NODE_ENV || 'production',
     target: "web",
     entry: path.join(__dirname,'../client/index.js'),
     output: {
@@ -28,7 +29,7 @@ const config = {
             {
                 test: /\.vue$/,
                 loader: "vue-loader",
-                options: vueLoaderOptions(isPro)
+                options: vueLoaderOptions(isDev)
             },
             {
                 test: /\.js$/,
@@ -56,12 +57,7 @@ const config = {
         ]
     },
 
-    optimization: {
-        splitChunks: {
-            chunks: "all"
-        },
-        runtimeChunk: true,
-    }
+
 }
 
 

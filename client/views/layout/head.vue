@@ -6,8 +6,7 @@
 
 <script>
     export default {
-      name: 'header'
-
+      name: 'v-header'
     }
 </script>
 

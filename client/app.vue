@@ -3,13 +3,19 @@
         <div id="cover">
         </div>
         <Header></Header>
-        <board></board>
+        <!--<board></board>-->
+      <router-link to="/app">board</router-link>
+      <router-link to="/login">login</router-link>
+      <transition>
+        <router-view/>
+      </transition>
 
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
-    import Header from './views/layout/header.vue'
+    import Header from './views/layout/head.vue'
     import Footer from './views/layout/footer.jsx'
     import Board from './views/board/board.vue'
     export default {
